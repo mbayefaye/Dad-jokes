@@ -1,0 +1,135 @@
+.JokeList {
+  display: flex;
+  width: 80%;
+  height: 80%;
+}
+
+.JokeList-sidebar {
+  background: #9575cd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  z-index: 2;
+  text-align: center;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3),
+    0 15px 12px rgba(0, 0, 0, 0.1) inset 0 0 25px #7e57c2;
+}
+
+.JokeList-title {
+  font-size: 4rem;
+  margin: 2rem;
+  color: white;
+  font-weight: 300;
+  letter-spacing: 0.6rem;
+}
+
+.JokeList-title span {
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.JokeList-sidebar img {
+  width: 50%;
+  border-radius: 50%;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.1);
+}
+
+.JokeList-jokes {
+  height: 90%;
+  background: white;
+  align-self: center;
+  width: 70%;
+  overflow: scroll;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.1);
+}
+
+.Jokelist-spinner {
+  color: white;
+  text-align: center;
+}
+
+.Jokelist-getmore {
+  font-size: 1.5rem;
+  width: 50%;
+  color: white;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  margin: 2rem;
+  word-spacing: 0.2rem;
+  cursor: pointer;
+  transition: 0.8s cubic-bezier(0.2, 1, 0.2, 1);
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 2rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg,
+      rgba(179, 229, 252, 1) 0%,
+      rgba(179, 229, 252, 1) 50%,
+      rgba(240, 98, 146, 1) 50%,
+      rgba(240, 98, 146, 1) 100%);
+}
+
+.Jokelist-getmore:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+.Joke-smily:hover {
+  animation-name: move-up;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+}
+
+.fa-arrow-up,
+.fa-arrow-down {
+  font-size: 1.5em;
+  margin: 10px;
+  cursor: pointer;
+
+  transition: all 0.3s;
+}
+
+.fa-arrow-up:hover {
+  animation-name: move-up;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-out;
+  color: #8bc34a;
+}
+
+@keyframes move-up {
+
+  0%,
+  50%,
+  100% {
+    transform: translateY(0);
+  }
+
+  25%,
+  75% {
+    transform: translateY(-3px);
+  }
+}
+
+.fa-arrow-down:hover {
+  animation-name: move-down;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-out;
+  color: #f44336;
+}
+
+@keyframes move-down {
+
+  0%,
+  50%,
+  100% {
+    transform: translateY(0);
+  }
+
+  25%,
+  75% {
+    transform: translateY(3px);
+  }
+}
